@@ -9,6 +9,7 @@ angular.module('swapr.student').config(['localStorageServiceProvider', function(
 }]);
 
 angular.module('swapr.student').controller('MainCtrl', ['$scope', function ($scope) {
+    $scope.hello = 'hi there!';
     $scope.menuVisible = false;
 
     $scope.toggleMenu = function () {
@@ -16,12 +17,13 @@ angular.module('swapr.student').controller('MainCtrl', ['$scope', function ($sco
     };
 }]);
 
+
 angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider
-        .state('home', {
-            url: '/home',
+        .state('dashboard', {
+            url: '/dashboard',
             templateUrl: 'templates/student/dashboard.html',
             controller: 'DashboardCtrl'
         })
@@ -52,29 +54,8 @@ angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', 
         })
         .state('assignments.assignments', {
             url: '',
-            templateUrl: 'templates/student/assignments.html',
+            templateUrl: 'templates/assignments.html',
             controller: 'AssignmentsCtrl'
-        })
-        .state('assignments.assignment', {
-            url: '/assignment/:id',
-            views: {
-                '':{
-                    templateUrl: 'templates/student/assignment.html',
-                    controller: 'AssignmentCtrl'
-                },
-                'peerReview@assignments.assignment': {
-                    templateUrl:'templates/peerReviewMenu.html',
-                    controller: 'PeerReviewCtrl'
-                },
-                'videoUpload@assignments.assignment': {
-                    templateUrl: 'templates/upload.html',
-                    controller: 'UploadCtrl'
-                }
-            }
-            /*
-            templateUrl: 'templates/student/assignment.html',
-            controller: 'AssignmentCtrl'
-            */
         })
         .state('assignments.upload', {
             url: '/upload',
