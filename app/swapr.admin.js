@@ -8,13 +8,9 @@ angular.module('swapr.admin').config(['localStorageServiceProvider', function(lo
     localStorageServiceProvider.setPrefix('swapr.admin');
 }]);
 
-angular.module('swapr.admin').controller('MainCtrl', ['$scope', '$http', 'Auth', '$modal', function($scope, $http, Auth, $modal) {
-
+angular.module('swapr.admin').controller('MainCtrl', ['$scope', function($scope) {
+    $scope.hello = "this is another hello message";
 }]);
-
-angular.module('swapr.admin').run(function (Auth) {
-
-});
 
 angular.module('swapr.admin').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
@@ -45,34 +41,24 @@ angular.module('swapr.admin').config(['$stateProvider', '$urlRouterProvider', fu
             templateUrl: 'templates/profile.html',
             controller: 'ProfileCtrl'
         })
-        .state('courses', {
+        .state('classes', {
             abstract: true,
             template: '<ui-view />',
-            url: '/courses'
+            url: '/classes'
         })
-        .state('courses.course', {
-            url: '/course/:id',
-            views: {
-                '':{
-                    templateUrl: 'templates/admin/course/course.html',
-                    controller: 'CourseCtrl'
-                },
-                'tabView@courses.course':{
-                    templateUrl: 'templates/admin/course/courseTabs.html'
-                },
-                'peerReview@courses.course': {
-                    templateUrl:'templates/admin/course/peerReview.html',
-                    controller: 'PeerReviewCtrl'
-                },
-                'videoUpload@courses.course': {
-                    templateUrl: 'templates/admin/course/videoUpload.html',
-                    controller: 'VideoUploadCtrl'
-                }
-            }
+        .state('classes.class', {
+            url: '/class/:id',
+            templateUrl: 'templates/admin/class.html',
+            controller: 'ClassCtrl'
         })
-        .state('courses.assignments', {
+        .state('classes.class.assignments', {
+            abstract: true,
+            template: '<ui-view />',
+            url: '/assignments'
+        })
+        .state('assignments.assignments', {
             url: '',
-            templateUrl: 'templates/student/assignments.html',
+            templateUrl: 'templates/assignments.html',
             controller: 'AssignmentsCtrl'
         });
 }]);

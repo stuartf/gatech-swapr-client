@@ -11,32 +11,21 @@
     <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
-    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+
 
     <script type="text/javascript" src="swapr.js"></script>
     <script type="text/javascript" src="swapr.admin.js"></script>
-    <script type="text/javascript" src="ajax.js"></script>
-    <script type="text/javascript" src="authorization/auth.js"></script>
-    <script type="text/javascript" src="authorization/session-buttons/session-buttons.js"></script>
-    <script type="text/javascript" src="courses/CoursesService.js"></script>
-    <script type="text/javascript" src="assignments/AssignmentsService.js"></script>
-    <script type="text/javascript" src="assignments/admin/AssignmentsCtrl.js"></script>
-    <script type="text/javascript" src="dashboard/admin/DashboardCtrl.js"></script>
-    <script type="text/javascript" src="courses/admin/CourseCtrl.js"></script>
-    <script type="text/javascript" src="courses/admin/CoursesCtrl.js"></script>
-    <script type="text/javascript" src="courses/admin/PeerReviewCtrl.js"></script>
-    <script type="text/javascript" src="courses/admin/VideoUploadCtrl.js"></script>
-    <script type="text/javascript" src="profile/ProfileCtrl.js"></script>
-    <script type="text/javascript" src="profile/ProfileService.js"></script>
-    <script type="text/javascript" src="users/UsersService.js"></script>
-    <script type="text/javascript" src="assignments/RubricService.js"></script>
-
+    <script type="text/javascript" src="classes/admin/ClassesCtrl.js"></script>
+    <script type="text/javascript" src="classes/admin/ClassCtrl.js"></script>
     <title>SWAPR - Admin</title>
 </head>
 <body ng-controller="MainCtrl">
 <div id="menubar">
     <h1><a ui-sref="home">SWAPR - ADMIN</a></h1>
-    <div session-buttons></div>
+
+    <div id="profile-menu" ui-sref="profile">
+        <p>Mr. Administrator</p>
+    </div>
 </div>
 <div id="sidebar" ng-include="'templates/admin/sidebar.html'"></div>
 <div id="main" ui-view></div>
