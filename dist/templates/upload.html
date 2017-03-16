@@ -1,0 +1,24 @@
+<h1 class="title">{{upload.title}}</h1>
+
+<div class="card">{{intro}}</div>
+<form class="section">
+    Enter your video URL:
+    <input type="url" name="videoURLString" ng-model="inputUrl" ng-change="checkUrl()" style="width:43.7%;">
+</form>
+
+<div class="alert alert-danger" role="alert" ng-show="!urlIsValid">
+    Please enter a valid URL.
+</div>
+
+<div class="alert alert-warning" role="alert" ng-show="urlIsUploading">
+    Your video is currently uploading.
+</div>
+
+<div ng-show='videoUrl != "" && urlIsValid'>
+    <div class="video-responsive">
+        <youtube-video video-url="videoUrl"></youtube-video>
+    </div>
+</div>
+
+<button type="submit" value="Upload" name="upload" id="upload">Submit</button>
+
