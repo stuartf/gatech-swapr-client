@@ -14,8 +14,8 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
             // this will be loaded from the server eventually.
             $scope.peerReview = {
                 video: {
-                    url: "https://www.youtube.com/watch?v=0Bmhjf0rKe8",
-                    title: "Surprised Kitty"
+                    url: "https://www.youtube.com/watch?v=TMKj0BxzVgw",
+                    title: "Grunt is cool"
                 },
                 criteria: [
                     {

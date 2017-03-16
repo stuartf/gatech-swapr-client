@@ -30,16 +30,21 @@
 
     <title>SWAPR</title>
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl"> <!-- MainCtrl does not exist -->
 <div id="menubar">
     <h1><a ui-sref="dashboard">SWAPR</a></h1>
     <div id="profile-menu" ui-sref="profile">
         <p>George P. Burdell</p>
     </div>
 </div>
-<div id="sidebar" ng-include="'templates/student/sidebar.html'">
+
+<!-- <div id="sidebar" ng-include="'templates/student/sidebar.html'"> -->
+
 </div>
-<div id="main" ui-view></div>
+<!-- <div id="main" ui-view></div> -->  <!-- ui-view -->
+<div ui-view></div>  <!-- ui-view -->
 </body>
+
+
 <!--<script src="//localhost:35729/livereload.js"></script>-->
 </html>
