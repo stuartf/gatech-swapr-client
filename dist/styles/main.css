@@ -1926,6 +1926,12 @@ accordion div.panel-body {
     top: 5px;
     right: 10px;
     cursor: pointer; }
+  #menubar .course-title {
+    text-align: center;
+    background-color: #C82828; }
+  #menubar .menu-title {
+    padding: 5%;
+    color: white; }
 
 #main {
   padding: 10px;
@@ -1968,5 +1974,23 @@ accordion div.panel-body {
 .card-inline {
   margin-right: 10px;
   margin-bottom: 10px; }
+
+#todo-block {
+  float: left;
+  background: powderblue;
+  border-radius: 20px;
+  height: 700px;
+  width: 40%;
+  padding: 5px;
+  margin: 2.5%; }
+
+#completed-block {
+  float: right;
+  background: #8EF569;
+  border-radius: 20px;
+  height: 700px;
+  width: 40%;
+  padding: 5px;
+  margin: 2.5%; }
 
 /*# sourceMappingURL=main.css.map */

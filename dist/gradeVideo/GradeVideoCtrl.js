@@ -2,8 +2,8 @@
  * Created by tituswoo on 10/31/14.
  */
 
-angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageService',
-    function ($scope, localStorageService) {
+angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageService', 'AssignmentDB',
+    function ($scope, localStorageService, AssignmentDB) {
     var original = {};
 
     (function () {
@@ -14,8 +14,8 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
             // this will be loaded from the server eventually.
             $scope.peerReview = {
                 video: {
-                    url: "https://www.youtube.com/watch?v=TMKj0BxzVgw",
-                    title: "Grunt is cool"
+                    url: "https://www.youtube.com/watch?v=dl-eEpoePwo",
+                    title: "Lab 1 Review"
                 },
                 criteria: [
                     {
@@ -76,4 +76,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
     $scope.reset = function () {
         angular.copy(original, $scope.peerReview);
     };
+    $scope.submit = function() {
+        AssignmentDB.upload();
+    }
 }]);

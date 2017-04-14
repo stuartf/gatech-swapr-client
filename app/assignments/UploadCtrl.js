@@ -1,8 +1,8 @@
 /**
  * Created by Vaughan on 10/27/2014.
  */
-angular.module('swapr').controller('UploadCtrl',['$scope', '$stateParams', '$http', 'YoutubeValidation',
-    function ($scope, $stateParams, $http, YoutubeValidation) {
+angular.module('swapr.student').controller('UploadCtrl',['$scope', '$stateParams', '$http', 'YoutubeValidation', 'AssignmentDB',
+    function ($scope, $stateParams, $http, YoutubeValidation, AssignmentDB) {
     $scope.upload = {
         title: 'Lab 1 Video Upload',
         dueDate: '8/31/14',
@@ -25,6 +25,10 @@ angular.module('swapr').controller('UploadCtrl',['$scope', '$stateParams', '$htt
             }
         })
     };
+    $scope.submit = function(assignment) {
+        AssignmentDB.upload();
+    }
+
 
     //$scope.videoUrl = "https://www.youtube.com/watch?v=0Bmhjf0rKe8";
 
