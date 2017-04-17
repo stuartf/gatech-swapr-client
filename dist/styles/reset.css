@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  transition: 0.1s linear all; }
+
+html, body {
+  font-family: 'Roboto', sans-serif, Helvetica Neue, Helvetica, Arial;
+  heigh: 100%; }
+
+a:hover {
+  color: inherit;
+  text-decoration: inherit; }
+
+/*# sourceMappingURL=reset.css.map */

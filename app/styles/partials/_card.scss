@@ -29,3 +29,25 @@
     margin-right: $default-padding;
     margin-bottom: $default-padding;
 }
+
+#todo-block {
+  float: left;
+  background: #00254c;
+  border-radius: 20px;
+  height: 700px;
+  width: 40%; 
+  padding: 5px; 
+  margin: 2.5%;
+  color: white;
+}
+
+#completed-block {
+  float: right; 
+  background: #00254c; 
+  border-radius: 20px; 
+  height: 700px; 
+  width: 40%; 
+  padding: 5px; 
+  margin: 2.5%;
+  color: white;
+}
