@@ -25,7 +25,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
                             max: 5,
                             readonly: false
                         },
-                        feedback: 'enter feedback here.'
+                        feedback: ''
                     },
                     {
                         title: 'Content Models',
@@ -34,7 +34,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
                             max: 5,
                             readonly: false
                         },
-                        feedback: 'enter feedback here.'
+                        feedback: ''
                     },
                     {
                         title: 'Content Prediction Discussion',
@@ -43,7 +43,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
                             max: 5,
                             readonly: false
                         },
-                        feedback: 'enter feedback here.'
+                        feedback: ''
                     },
                     {
                         title: 'Content Overall',
@@ -52,7 +52,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
                             max: 5,
                             readonly: false
                         },
-                        feedback: 'enter feedback here.'
+                        feedback: ''
                     },
                     {
                         title: 'Production Delivery',
@@ -61,7 +61,7 @@ angular.module('swapr').controller('GradeVideoCtrl', ['$scope', 'localStorageSer
                             max: 5,
                             readonly: false
                         },
-                        feedback: 'enter feedback here.'
+                        feedback: ''
                     }
                 ]
             };
