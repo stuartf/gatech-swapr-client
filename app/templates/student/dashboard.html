@@ -1,46 +1,33 @@
-<!-- Temporarility using SidebarCtrl because links are there -->
+<!-- Temporarily using SidebarCtrl because links are there -->
 <h1 class="title" ng-controller="SidebarCtrl">
     <span style="padding: 5%">Home</span>
     <span style="padding: 5%"><a ui-sref="assignments.assignments" style="color:white">Assignments</a></span>
     <span style="padding: 5%"><a ui-sref="grades.grades" class="button" style="color:white">Grades</a></span>
 </h1>
 
-<div style="float: left; background: powderblue; border-radius: 20px; height: 700px; width: 700px; padding: 10px; margin: 20px"><!-- class="card" -->
-    <h3 class="title">Todo Assignments</h3>
+<div id="todo-block"> <!-- class="card" -->
+    <h2>To-Do</h2>
+    <h3>Your Assignments</h3>
     <div ng-controller="AssignmentsCtrl">
         <ul style="text-align: left">
-            <li class="card" ng-repeat="assignment in assignments">
-                <p><a ui-sref="{{assignment.route}}">{{assignment.title}}</a></p>
-                <p><div class="pull-right">due in 3 days</div></p>
+            <li class="card" ng-repeat="assignment in todo">
+                <p><a ui-sref="{{assignment.route}}" ng-click="enqueue(assignment)">{{assignment.title}}</a></p>
+                <p><div class="pull-right">due {{assignment.dueDate}} at {{assignment.dueTime}}</div></p>
             </li>
         </ul>
     </div>
-    <!-- <h3 class="title">Todo Assignments</h3>
-    <ul>
-        <li>Lab 5</li>
-        <li>Lab 6</li>
-        <li>Lab 7</li>
-        <li>Lab 8</li>
-    </ul> -->
+    
 </div>
 
-<div style="float: right; background: #8EF569; border-radius: 20px; height: 700px; width: 700px; padding: 10px; margin: 20px"><!-- class="card" -->
-    <!-- <h3 class="title">Completed Assignments</h3>
+<div id="completed-block">
+    <h2 class="title">Completed</h2>
+    <h3>Your Assignments</h3>
     <div ng-controller="AssignmentsCtrl">
         <ul style="text-align: left">
-            <li ng-repeat="assignment in assignments">
-                <a ui-sref="{{assignment.route}}">{{assignment.title}}</a>
-                <div class="pull-right">due in 3 days</div>
+            <li class="card" ng-repeat="assignment in completed">
+                <p><a ui-sref="{{assignment.route}}">{{assignment.title}}</a></p>
+                <p><div class="pull-right">due {{assignment.dueDate}} at {{assignment.dueTime}}</div></p>
             </li>
-        </ul>
-    </div> -->
-    <h3 class="title">Completed Assignments</h3>
-    <div>
-        <ul>
-            <li class="card">Lab 1</li>
-            <li class="card">Lab 2</li>
-            <li class="card">Lab 3</li>
-            <li class="card">Lab 4</li>
         </ul>
     </div>
 </div>

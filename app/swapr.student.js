@@ -9,6 +9,7 @@ angular.module('swapr.student').config(['localStorageServiceProvider', function(
 }]);
 
 angular.module('swapr.student').controller('MainCtrl', ['$scope', function ($scope) {
+    console.log("New Main Controller")
     $scope.hello = 'hi there!';
     $scope.menuVisible = false;
 
