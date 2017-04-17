@@ -48,6 +48,7 @@ angular.module('swapr.student').service('AssignmentDB', ['$stateParams', functio
     this.clearQueue = function() {
         current = []
     }
+    this.getCurrent = function() {return current}
     this.getTodo = function() {return todo}
     this.getCompleted = function() {return completed}
 }]);

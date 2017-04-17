@@ -1,19 +1,37 @@
 <div style="padding-top: 5%">
-	<h1 class="title">{{upload.title}}</h1>
+	
 
-	<div class="card">{{intro}}</div>
-		<div style=" margin: 10px;"">
-			<!-- <h3>Assignment Info</h3> -->
-			<p style="width:23.7%;margin-bottom: 10%">
-				This experiment is the rotational equivalent of the "Motion with Constant Acceleration" experiment that we looked at in SC525 which involved a cart tied to a string that passed over a pulley and supported a vertical mass. In this experiment you will investigate moments of inertia by applying a torque to a disk that is free to rotate. The torque comes from a string wrapped around a pulley on the disk; the string passes over a second pulley and has a mass hanging from it. 
-			</p>
-			<form class="section">
-			    Enter your video URL:
-			    <input type="url" name="videoURLString" ng-model="inputUrl" ng-change="checkUrl()" style="width:23.7%;">
-			</form>
-			<button type="submit" value="Upload" name="upload" id="upload" ng-click="submit()" ui-sref="dashboard">Submit</button>
+	<!-- <div class="card">{{intro}}</div> -->
+		<div style="padding:1%;">
+			<div style="width: 45%">
+					<h1 class="title" style="margin-bottom: 2%;">{{upload.title}}</h1>
+					<!-- <h3>Assignment Info</h3> -->
+					<p style="width:100%;margin-bottom: 10%">
+						This experiment is the rotational equivalent of the "Motion with Constant Acceleration" experiment that we looked at in SC525 which involved a cart tied to a string that passed over a pulley and supported a vertical mass. In this experiment you will investigate moments of inertia by applying a torque to a disk that is free to rotate. The torque comes from a string wrapped around a pulley on the disk; the string passes over a second pulley and has a mass hanging from it. 
+					</p>
+					<form class="section">
+					    Enter your video URL:
+					    <input type="url" name="videoURLString" ng-model="inputUrl" ng-change="checkUrl()" style="width:23.7%;">
+					</form>
+					<button type="submit" value="Upload" name="upload" id="upload" ng-click="submit()" ui-sref="dashboard">Submit</button>
+
+			</div>
+			<!-- <div style="width:45%; float:right">
+					<p> Place the coin on the card, and place the card over the open end of a beaker</p>
+					<img src="">
+					<p>Flick the card away sharply and observe the effect of the coin's motion.</p>
+					<p><b>One large mass</b>
+						c Hang a large mass (1 kg or more) by thread from a strong, rigid support. Attach a second thread to the underside of the mass. 
+		 
+						d Pull the lower thread with a force that increases slowly until one of the threads breaks. 
+		 
+						e Try again with a short sharp pull.</p>
+			</div> -->
+			
 			
 		</div>
+		
+		
 		
 		
 
