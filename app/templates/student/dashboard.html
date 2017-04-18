@@ -25,7 +25,7 @@
     <div ng-controller="AssignmentsCtrl">
         <ul style="text-align: left">
             <li class="card" ng-repeat="assignment in completed">
-                <p><a ui-sref="{{assignment.route}}">{{assignment.title}}</a></p>
+                <p><a ui-sref="{{assignment.route}}" ng-click="enqueue(assignment)">{{assignment.title}}</a></p>
                 <p><div class="pull-right">due {{assignment.dueDate}} at {{assignment.dueTime}}</div></p>
             </li>
         </ul>
