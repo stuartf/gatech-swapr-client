@@ -19,7 +19,7 @@ angular.module('swapr.student').controller('MainCtrl', ['$scope', function ($sco
 }]);
 
 
-angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', '$locationProvider' function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider
@@ -72,5 +72,7 @@ angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', 
             url: '/gradeVideo',
             templateUrl: 'templates/gradeVideo.html',
             controller: 'GradeVideoCtrl'
-        })
+        });
+
+    $locationProvider.html5Mode(true);
 }]);
