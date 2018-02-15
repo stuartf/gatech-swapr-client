@@ -3,33 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="styles/main.scss"/>
     <script type="text/javascript" src="index.js"></script>
 
     <title>SWAPR</title>
+    <base href="/">
 </head>
-<body ng-controller="MainCtrl"> <!-- MainCtrl does not exist -->
-<div id="menubar" > <!-- style="margin-bottom: 10px" -->
-    <h2 class="course-title">PHYSICS 2211</h2>
-    <h1>
-        <a ui-sref="dashboard">SWAPR</a>
-        <!-- <span style="padding: 5%">Home</span> -->
+<body ng-controller="MainCtrl">
+    <div id="menubar" >
+        <h2 class="course-title">PHYSICS 2211</h2>
+        <h1>
+            <a ui-sref="dashboard">SWAPR</a>
+            <!-- <span style="padding: 5%">Home</span> -->
+            
+            <!-- <a class="menu-title" ui-sref="assignments.assignments">Assignments
+            </a>
+            
+            <a ui-sref="grades.grades" class="button">Grades</a> -->
+        </h1>
         
-        <!-- <a class="menu-title" ui-sref="assignments.assignments">Assignments
-        </a>
-        
-        <a ui-sref="grades.grades" class="button">Grades</a> -->
-    </h1>
-    
 
-    <div id="profile-menu" ui-sref="profile">
-        <p>Tom P. Burdell</p>
+        <div id="profile-menu" ui-sref="profile">
+            <p>Tom P. Burdell</p>
+        </div>
     </div>
-</div>
 
-<div id="main" ui-view></div>  <!-- ui-view -->
+    <div ui-view></div>
 </body>
 
 </html>

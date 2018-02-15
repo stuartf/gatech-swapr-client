@@ -19,7 +19,7 @@ angular.module('swapr.student').controller('MainCtrl', ['$scope', function ($sco
 }]);
 
 
-angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', '$locationProvider' function ($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('swapr.student').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider

@@ -1,8 +1,8 @@
 import 'angular';
 import 'angular-local-storage';
 import 'angular-bootstrap';
-import 'angular-ui-router';
-import 'angular-youtube-mb';
+import '@uirouter/angularjs';
+import 'angular-youtube-embed';
 
 
 

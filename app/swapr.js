@@ -5,5 +5,5 @@
 angular.module('swapr', []);
 
 angular.module('swapr').constant('CONSTANTS', {
-    'BASE_URL': 'http://private-a85d0-swaprapi.apiary-mock.com/'
+    'BASE_URL': 'https://private-a85d0-swaprapi.apiary-mock.com/'
 });

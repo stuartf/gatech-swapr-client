@@ -1,35 +1,24 @@
+# development client watcher using parceljs
+
 # Use Ubuntu as base image
-FROM ubuntu:latest
+FROM node:8.7.0
 
-# Update apt-get to latest version
-RUN apt-get update
-# Install build-essentials
-RUN apt-get install -y build-essential libssl-dev
-# Install node
-RUN apt-get install -y nodejs-legacy
-# Install npm
-RUN apt-get install -y npm
-# Install Ruby
-RUN apt-get install -y ruby-full
-# Install Sass
-RUN gem install sass --no-user-install
+# Install node dependencies
+RUN npm install yarn 
 
-# Expose port 3000 on the container (must bind to host port in either docker run command or docker compose file)
-#EXPOSE 3000
+RUN mkdir -p /data/node_modules
 
-# Add working directory to container
-ADD . /client
-WORKDIR /client
+WORKDIR /data
+COPY package.json yarn.lock /data/
 
-# Client build process
-RUN npm uninstall grunt-cli
-RUN npm install
-RUN npm uninstall bower
-RUN npm install -g bower
-RUN bower install --allow-root
-RUN npm uninstall grunt-cli
-RUN npm install -g grunt-cli
-RUN grunt dev
+RUN yarn --pure-lockfile
+
+ENV PATH /data/node_modules/.bin:$PATH
+
+RUN mkdir -p /data/src
+
+ADD . /data/src
+WORKDIR /data/src
 
 # Default command
-CMD ["/bin/sh"]
+CMD ["yarn", "run", "--modules-folder /data/node_modules", "docker-watch"]
