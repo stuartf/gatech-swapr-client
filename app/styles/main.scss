@@ -1,13 +1,12 @@
-@import "bootstrap";
-@import "reset";
-@import "variables";
-@import "mixins";
-@import "utilities";
-@import "partials/form";
-@import "partials/accordion";
-@import "partials/profile-pic";
-@import "partials/video-responsive";
-@import "partials/menubar";
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./utilities";
+@import "./partials/form";
+@import "./partials/accordion";
+@import "./partials/profile-pic";
+@import "./partials/video-responsive";
+@import "./partials/menubar";
 
-@import "partials/main";
-@import "partials/card";
+@import "./partials/main";
+@import "./partials/card";
