@@ -1,7 +1,7 @@
 /**
  * Created by Vaughan on 10/24/2014.
  */
-angular.module('swapr.student')
+/*angular.module('swapr.student')
 
 .service("assignment", function assign(){
     var assignment = this;
@@ -19,4 +19,9 @@ angular.module('swapr.student')
         AssignmentDB.enqueue(assignment)
     }
    
+}]);*/
+angular.module('swapr').controller('AssignmentsCtrl', ['$scope', 'Assignments', function($scope, Assignments) {
+    Assignments.getActiveAssignments().success(function(data, status) {
+        $scope.todo = data;
+    });
 }]);

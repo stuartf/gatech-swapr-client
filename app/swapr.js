@@ -5,5 +5,6 @@
 angular.module('swapr', []);
 
 angular.module('swapr').constant('CONSTANTS', {
-    'BASE_URL': 'https://private-a85d0-swaprapi.apiary-mock.com/'
+    'DEV_URL': 'https://swapr-dev.vip.gatech.edu:8443/',
+    'PROD_URL': 'https://swapr.vip.gatech.edu/'
 });
