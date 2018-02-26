@@ -3,12 +3,25 @@ import { Route, IndexRoute } from 'react-router';
 import App from './components/app';
 import Login from './components/views/login';
 import StudentDash from './components/views/studentDashboard';
-import AdminDash from './components/views/adminDashboard';
+//import AdminDash from './components/views/adminDashboard';
+
+function loggedIn() {
+
+
+function requireAuth(nextState, replace) {
+    if (!loggedIn()) {
+        replace({
+            pathname: '/login'
+        })
+    }
+}
 
 // TODO: render different page (Login, StudentDash, AdminDash) based on login status
 export default (
     <Route path='/' component={App}>
-        <IndexRoute component={Login} />
+        //<IndexRoute component={Login} />
+        <Route path='login' component={Login} />
+        <Route path='dashboard' component={StudentDash} onEnter={requireAuth} />
         <Route path='*' component={Login} />
     </Route>
 );
