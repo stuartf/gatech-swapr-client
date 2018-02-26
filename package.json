@@ -7,12 +7,15 @@
     "parcel-bundler": "^1.5.1"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.9",
     "angular-bootstrap": "^0.12.2",
     "angular-local-storage": "^0.7.1",
     "angular-youtube-embed": "^1.0.3",
     "bootstrap-sass": "^3.3.7",
-    "@uirouter/angularjs": "^1.0.3"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0"
   },
   "scripts": {
     "build": "webpack --config webpack-production.config.js --progress --profile --colors",
