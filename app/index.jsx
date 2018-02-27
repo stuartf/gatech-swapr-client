@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Router, browserHistory } from 'react-router';
-import routes form './routes';
+import routes from './routes.jsx';
 
 // Require stylesheets as needed
 
