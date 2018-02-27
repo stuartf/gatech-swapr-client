@@ -20,12 +20,12 @@
          ]
      },
      output: {
-         path: path.resolve(__dirname, 'build'),
+         path: path.resolve(__dirname, 'dist'),
          filename: 'app.bundle.js'
      },
      devServer: {
         inline: false,
-        contentBase: "./build",
+        contentBase: "./dist",
      },
      stats: {
          colors: true
