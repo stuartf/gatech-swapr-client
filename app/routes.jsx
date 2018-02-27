@@ -10,21 +10,20 @@ function loggedIn() {
     return false;
 }
 
-function requireAuth(nextState, replace) {
-    if (!loggedIn()) {
-        replace({
-            pathname: '/login',
-            state: { nextState.location.pathname }
-        })
-    }
-}
+// function requireAuth(nextState, replace) {
+//     if (!loggedIn()) {
+//         replace({
+//             pathname: '/login',
+//             state: { nextState.location.pathname }
+//         })
+//     }
+// }
 
 // TODO: render different page (Login, StudentDash, AdminDash) based on login status
 export default (
     <Route path='/' component={App}>
         <IndexRoute component={Login} />
         <Route path='login' component={Login} />
-        //<Route path='dashboard' component={StudentDash} onEnter={requireAuth} />
         <Route path='*' component={Login} />
     </Route>
 );
