@@ -6,5 +6,5 @@ dist/
 .DS_Store
 .cache/
 build/
-dist/
+dist/*
 yarn-error.log
