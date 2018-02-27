@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Router, browserHistory } from 'react-router';
+import { BrowserRouter } from 'react-router-dom'
 import routes from './routes.jsx';
 
 // Require stylesheets as needed
 
 ReactDOM.render(
-    <Router history={browserHistory} routes={routes} />,
+    <BrowserRouter routes={routes} />,
     document.querySelector('#app')
 );
