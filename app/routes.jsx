@@ -17,7 +17,14 @@ function loggedIn() {
 //             state: { nextState.location.pathname }
 //         })
 //     }
-// }
+function requireAuth(nextState, replace) {
+    if (!loggedIn()) {
+        replace({
+            pathname: '/login',
+            state: { nextPathname: nextState.location.pathname }
+        })
+    }
+}
 
 // TODO: render different page (Login, StudentDash, AdminDash) based on login status
 export default (
