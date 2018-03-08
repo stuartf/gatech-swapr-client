@@ -1,17 +1,20 @@
 var path = require('path');
 var webpack = require('webpack');
+
 module.exports = {
+    
   context: __dirname,
   entry: "./app/index.jsx",
   output: {
-    path: path.resolve(__dirname, '/dist'),
-    filename: "app.bundle.js"
+    path: path.join(__dirname, '/dist'),
+    filename: "app.bundle.js",
+    publicPath: 'http://localhost:8080'
   },
   module: {
     loaders: [
       {
         test: /\.js|.jsx?$/,
-        exclude: /(node_modules)/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015']
@@ -31,6 +34,7 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './dist',
+    hot: true
   }
 };

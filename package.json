@@ -31,7 +31,7 @@
   },
   "scripts": {
     "webpack": "webpack",
-    "dev": "webpack-dev-server"
+    "start": "webpack-dev-server -d --config webpack.dev.config.js --content-base dist/"
   },
   "author": "",
   "license": "ISC"
