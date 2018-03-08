@@ -6,12 +6,12 @@ module.exports = {
   context: __dirname,
   entry: "./app/index.jsx",
   output: {
-    path: path.join(__dirname, '/dist'),
     filename: "app.bundle.js",
-    publicPath: 'http://localhost:8080'
+    path: path.join(__dirname, 'dist/'),
+    publicPath: 'https://localhost:8080'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js|.jsx?$/,
         exclude: /node_modules/,
