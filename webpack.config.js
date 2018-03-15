@@ -30,6 +30,9 @@
      stats: {
          colors: true
      },
-     devtool: 'source-map'
+     devtool: 'source-map',
+     resolve: {
+         extensions: [".js", ".json", ".jsx"]
+     }
  };
 
