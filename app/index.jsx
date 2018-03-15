@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import Login from './components/views/Login';
+import App from './components/app';
+import Login from './components/views/login';
 import { BrowserRouter } from 'react-router-dom'
 
 // Require stylesheets as needed
